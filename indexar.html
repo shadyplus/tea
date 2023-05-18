@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<html><head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+        <script>
+        function set_validator_errors(){
+            orderValidator.errorTitle = 'يرجى تصحيح الأخطاء التالية'; 
+    
+            orderValidator.errorNameField = 'الاسم'; 
+            orderValidator.errorNameMess = 'أدخل أسمك'; 
+            
+            orderValidator.errorPhoneField = 'رقم التليفون'; 
+            orderValidator.errorPhoneMess = 'أدخل رقم الهاتف الصحيح'; 
+            
+            orderValidator.errorAddress = 'أدخل العنوان الصحيح'; 
+            orderValidator.errorRequired = 'يتطلب حقلا'; 
+            orderValidator.errorMaxLength = 'حرف {1} بحد أقصى صالح'; 
+            orderValidator.errorMinLength = 'الحد الأدنى لعدد حروف {1}'; 
+            orderValidator.errorEmailField = 'البريد الإلكتروني';
+            orderValidator.errorEmail = 'تم تحديد بريد إلكتروني غير صالح';
+            }
+        </script>
+        
+    <script>
+    
+    
+    window.app = {
+        timestamp: parseInt((new Date()).getTime() / 1000),
+        jq: jQuery,
+        formAction: window.location.href,
+        leadToken: '6465cd1794d551.69626020',
+        offers: {"37400":{"id":37400,"country":{"code":"DZ","name":"\u0410\u043b\u0436\u0438\u0440"},"price":"5999","price2":"11998","currency":{"code":"DZD","name":"DA"},"discount":"","delivery_price":"","link":"","product_sku":"","prepaid_info_html":""}},
+        currentOffer: {"id":37400,"country":{"code":"DZ","name":"\u0410\u043b\u0436\u0438\u0440"},"price":"5999","price2":"11998","currency":{"code":"DZD","name":"DA"},"discount":"","delivery_price":"","link":"","product_sku":"","prepaid_info_html":""},
+        allowedCountries: ["DZ"],
+        _setOfferId: false,
+        streamHid: '',
+        showcaseUrl: '',
+        disablePhoneMask: Boolean(),
+        
+        setOffer: function (offerId) {
+            if (offerId == this._setOfferId) {
+                return ;
+            }
+            this._setOfferId = offerId;
+            if (offerId) {
+                var offer = app.offers[offerId];
+                var previousOffer = app.currentOffer;
+                app.currentOffer = offer;
+                var event = this.jq.Event("offerchange");
+                event.previousOffer = previousOffer;
+                event.currentOffer = app.currentOffer;
+                this.jq(document).trigger(event);
+                this.updatePage(offer);
+            } else {
+                $('input[name=country]').val('');
+            }
+        },
+        
+        updatePage: function(offer) {
+            $('x-newprice').html(offer.price);
+            $('x-oldprice').html(offer.price2);
+            $('x-currency').html(offer.currency.name);
+            $('input[name=offer], select[name=offer]').val(offer.id);
+            $('input[name=country]').val(offer.country.code);
+        },
+    
+        blockForm: function() {
+            // Блокируем кнопки при отправке формы
+            $('input[type=submit]', $(this)).prop( 'disabled', true ).attr( 'disabled', true );
+            $('button', $(this)).prop( 'disabled', true ).attr( 'disabled', true );
+            app.incompleteOrder.lock = true;
+            clearTimeout(app.incompleteOrder.timer);
+        },
+    
+        unblockForm: function() {
+            $('input[type=submit]', $(this)).prop( 'disabled', false ).attr( 'disabled', false );
+            $('button[type=submit]', $(this)).prop( 'disabled', false ).attr( 'disabled', false );
+            app.incompleteOrder.lock = false;
+            clearTimeout(app.incompleteOrder.timer);
+        }
+    
+    };
+    
+    
+</script><script src="rhinomainstream.xcartpro.com/shared/form.validate.js"></script>
+<script src="rhinomainstream.xcartpro.com/shared/interPhoneCodes.js"></script>
+<script src="rhinomainstream.xcartpro.com/shared/showcase.js"></script>
+<script src="./rhinomainstream.xcartpro.com/shared/form.incomplete.js"></script>
+<script src="./rhinomainstream.xcartpro.com/shared/main2.js"></script>
+    
+    
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <title>RHINO: حلاً قويًا للحيوية الجنسية</title>
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    
+    </head>
+    <body data-new-gr-c-s-check-loaded="14.1110.0" data-gr-ext-installed="">
+     
+    
+    
+        <main dir="rtl">
+            <div class="all_content">
+                <header class="clearfix">
+                    <div style="text-align: center;">
+                        <a id="btttt" href="./index.html">  Français </a>
+                </div>
+                        <div class="header__logo">
+                            <p class="lt0">صحتك
+                                هنا</p><img alt="" src="img/header__logo.jpg">
+                        </div>
+    
+                    <div class="clearfix header__nav">
+                        <ul class="header-menu men">
+                            <a href="#fform" class="main-lnk">
+                                <li class="lt1">الصحة</li>
+                            </a>
+                            <a href="#fform" class="main-lnk">
+                                <li class="lt2">التعليم</li>
+                            </a>
+                            <a href="#fform" class="main-lnk">
+                                <li class="lt3">الضعف</li>
+                            </a>
+                            <a href="#fform" class="main-lnk">
+                                <li class="lt4">مشاكل الرجال </li>
+                            </a>
+    
+                        </ul>
+                       
+                    </div>
+                </header>
+                <div class="content clearfix">
+                    <div class="header-crumbs"><a href="#" class="lt9">الرئيسية</a><span class="sep lt10">&gt;</span><a href="#fform" class="lt11"> أخبار </a><span class="sep lt12">&gt;</span><a href="#fform" class="lt13">RHINO: حلاً قويًا للحيوية الجنسية</a>
+                        <h1 class="lt16">RHINO: حلاً قويًا للحيوية الجنسية</h1>
+    
+                    </div>
+                    <img alt="" src="./img/profile-img2.jpg" width="100%">
+                    <div class="left_column clearfix" >
+    
+                        <p>اسمي <b><strong>بوتوف دينيس أندرييفيتش</strong></b>، أنا طبيب عام ملتزم بصحة مرضاي. أنشئ علاقات ثقة من خلال الاستماع بعناية لاحتياجاتهم وتقديم حلول مناسبة.</p>
+                        <p>يتناول موضوع اليوم RHINO، وهو منتج لتحسين القوة الجنسية للرجال. من المهم أن يقرأ النساء هذه المقالة أيضًا، حيث يميل الرجال إلى عدم مراجعة الطبيب في بداية المشكلة ومحاولة علاج مشاكل القوة بأدوية منزلية.</p>
+                        <p>RHINO هو منتج فعال مصمم لتحسين القوة الجنسية للرجال. تم تصميمه خصيصًا لمساعدة الرجال الذين يعانون من ضعف الانتصاب في استعادة وظيفة الانتصاب الطبيعية وثقتهم بأنفسهم.</p>
+                        <p>بفضل تركيبته الفريدة، يعمل RHINO عن طريق زيادة تدفق الدم إلى القضيب، مما يعزز الانتصابات الأقوى والأطول. يعمل بسرعة، مما يتيح للرجال الاستمتاع بنشاط جنسي مرضٍ دون أي قلق.</p>
+                        <p>RHINO سهل الاستخدام. يجب تناول حبة واحدة تقريبًا قبل ساعة من النشاط الجنسي المخطط له، ويمكن أن تستمر التأثيرات لعدة ساعات. أبلغ المستخدمون عن نتائج إيجابية، مع تحسن ملحوظ في أدائهم الجنسي ورضاهم العام.</p>
+                        <p>من المهم أن نلاحظ أنه يجب تناول RHINO فقط وفقًا لتعليمات الطبي
+                        </p>
+
+                        <h3>الأشخاص المعنيين</h3>
+                    <ul>
+                        <li>الرجال الذين يعانون من ضعف الانتصاب</li>
+                        <li>تحسين الأداء الجنسي</li>
+                        <li>تعزيز الثقة بالنفس</li>
+                        <li>البحث عن حل فعال</li>
+                    </ul>
+                        <img src="./img/2.jpg">
+    
+                        
+    
+
+                        <h3>مشاكل جنسية:</h3>
+                        <ul>
+                            <li>انخفاض الرغبة الجنسية.</li>
+                            <li>اضطراب الانتصاب.</li>
+                            <li>انتصاب ضعيف أو غير كافٍ.</li>
+                        </ul>
+                        <h3>مشاكل القذف:</h3>
+                        <ul>
+                            <li>التعب السريع والاضطرابات الجسدية.</li>
+                            <li>القذف المبكر أو الصعوبات في القذف.</li>
+                            <li>القذف الضعيف.</li>
+                            <li>مشاكل في الانتصاب.</li>
+                            <li>انخفاض الرغبة الجنسية أو الشهوة الجنسية.</li>
+                        </ul>
+                        
+                        <h3>RHINO: الحل الطبيعي للصحة الجنسية</h3>
+                        <p>عندما يتعلق الأمر بالحفاظ على حياة جنسية مشبعة وصحية، يأتي RHINO كخيار ممتاز. هذا المكمل الطبيعي مصمم خصيصًا لمعالجة مشاكل الجنس وتحسين الصحة الجنسية الشاملة. من خلال مزيج الخصائص الفعالة لثمرة البرقوق الأفريقي والقراص، يوفر RHINO نهجًا شاملاً لمساعدة الأفراد وتحسين تجاربهم الجنسية.</p>
+                        <p>أحد المكونات الرئيسية الموجودة في RHINO هو استخراج ثمرة البرقوق الأفريقي. فقد تم الاعتراف منذ فترة طويلة بفوائدها المحتملة في دعم صحة البروستاتا. ومن المعروف أنها تساعد في تخفيف الأعراض المرتبطة بتضخم البروستاتا، مثل التبول المتكرر والازعاج. من خلال تعزيز صحة البروستاتا، يساهم ثمرة البرقوق الأفريقي في تحسين الوظيفة الجنسية والرفاهية العامة.</p>
+                        <p>القراص، المكون الآخر البارز في RHINO، يقدم فوائده الخاصة أيضًا. فإن استخراج القراص معروف بتأثيره الإيجابي على مستويات التستوستيرون، التي تلعب دورًا حاسمًا في الرغبة والأداء الجنسي. من خلال دعم مستويات التستوستيرون المثلى، يساعد القراص في تحسين الرغبة الجنسية والقدرة على الممارسة الجنسية والرضا الجنسي. بالإضافة إلى ذلك، يمكن أن يساعد القراص في تقليل الالتهابات، ودعم الصحة البولية، وتعزيز النشاط العام.</p>
+                        <p>مزيج قوى RHINO، ثمرة البر
+                            </p>
+
+                        <div class="flex">
+                            <div class="flex-item">
+                                <img src="./img/item-1.jpg">
+                                <b>الخوخ الافريقي		</b>
+                                <p>إن الخوخ الأفريقي يحتوي على مجموعة من العناصر الغذائية الهامة مثل الفيتامينات والألياف والبوتاسيوم، والتي تساهم في دعم الصحة الجنسية والمناعة.
+                                    يستخدم أيضاً كمكمل غذائي عشبي؛ للمساهمة في التخلص من العديد من المشاكل الجنسيةو مشاكل البروستات أيضاً.
+                                </p>
+                            </div>
+                            <div class="flex-item">
+                                <img src="img/item-2.jpg">
+                                <b>نبات القراص	</b>
+                                <p>يساعد تناول مستخلص نبات القراص بانتظام على حماية الرجال من العديد من المشكلات الجنسية التي قد يتعرض لها مع التقدم في العمر، مثل: مشكلة الضعف الجنسي .
+                                </p>
+                            </div>
+    
+                        </div>
+                        <img src="./img/rhino3.png" style="width: 100%; max-width: 300px">
+                        <h3><a href="#">RHINO</a>: خيار ميسور التكلفة لتحسين القدرة الجنسية</h3>
+                        <p>عندما يتعلق الأمر بتحسين الأداء الجنسي، من الضروري أن نجد حلاً فعالاً وغير مكلف. وهنا يبرز RHINO بسعره الميسور التكلفة، حيث يمكن توفير خصم يصل إلى 50٪ مقارنة بخيارات أخرى في السوق. من خلال جمع سعره الميسور التكلفة مع فعاليته المثبتة، يصبح RHINO صفقة حقيقية لأولئك الذين يسعون لتحسين حياتهم الجنسية.</p>
+                        <p>بالمقارنة مع منتجات مماثلة أخرى، يقدم RHINO توازنًا ممتازًا بين الجودة والسعر الميسور التكلفة. من المهم أن نلاحظ أن السعر الميسور لا يؤثر على فعالية RHINO. لقد أفاد المستخدمون بنتائج إيجابية وتحسين ملحوظ في أدائهم الجنسي بعد استخدام RHINO. وبالتالي، يعد RHINO حلاً اقتصاديًا وقويًا لأولئك الذين يسعون لتحسين تجربتهم الجنسية.</p>
+                        <p>من المهم أن نشير إلى أن RHINO هو منتج طبيعي وما زال من المستحسن دائمًا استشارة الطبيب قبل استخدامه، خاصة إذا كانت لديك مخاوف خاصة. ومع ذلك، كخيار ميسور التكلفة وفعال لتحسين حياتك الجنسية، يمثل RHINO فرصة حقيقية لأولئك الذين يسعون للتمتع بتجارب جنسية أكثر رضا.</p>
+    
+    
+    
+    
+                        <div class="order" id="order">
+                            <center>
+                                <h3 style="    padding: 20px 0 0;">كل ما عليك فعله هو كتابة اسمك ورقم هاتفك</h3>
+                                <img src="./img/rhino2.png" class="foto-2">
+                                <div class="price_block clearfix" id="fform">
+                                    <div class="price_item old">
+                                        <div class="text">  السعر قبل التخفيض:</div>
+                                        <div class="value"><x-oldprice>11998</x-oldprice> <x-currency>DA</x-currency></div>
+                                    </div>
+                                    <div class="price_item new">
+                                        <div class="text">    السعر بعد التخفيض: </div>
+                                        <div class="value"><x-newprice>5999</x-newprice> <x-currency>DA</x-currency></div>
+                                    </div>
+                                </div>
+                                <form action="#" method="post" autocomplete="on"><input type="hidden" name="stream_hid" value=""><input type="hidden" name="code_confirm" value=""><input type="hidden" name="visit_duration2" value=""><input type="hidden" name="visit_duration1" value="14"><input type="hidden" name="timezone_int" value="3"><input type="hidden" name="local_time" value=""><input type="hidden" name="lead_token" value="6465cd1794d551.69626020"><input type="hidden" name="country" value="DZ">
+    
+           <input name="csrf_token" type="hidden" value="9ed8a99a8c273c6cee0a09055dbcf6a8:1684393240">
+        <select name="offer" class="form-control country_chang" style="display: none;">
+            <option data-country-code="DZ" selected="selected" value="37400">
+                Алжир        </option>
+        </select>
+    
+                                        <input name="name" placeholder="ادخل إسمك " type="text" autocomplete="name" required="required">
+                                    <input name="phone" placeholder="+213" type="tel" dir="ltr" autocomplete="tel" required="required">
+                                    <button type="submit" class="button">ترتيب الشراء</button></form></center>
+                            <p style="font-size: 13px; text-align: center">عند شرائك دورة Rhino  </p>
+    
+                        </div>
+    
+    
+                        <div class="comments" dir="rtl">
+                            <h3><b class="lt47"> تعليقات اليوم</b></h3>
+                            <div class="comment mobile clearfix">
+    
+                                    <div class="ava"><img alt="" src="img/ava-1.jpg"></div>
+    
+    
+                                    <div class="autor"> <span class="lt48">ياسين</span> </div>
+    
+                                <div class="text">
+                                    <p class="lt49">أؤكد ما قاله الآخرون هنا، إن RHINO هو علاج رائع. كانت لدي مشكلات في التبول - رغبات متكررة، وكان التدفق ضعيفًا جدًا. كنت أقوم بالنهوض حوالي 10 مرات في الليل بسبب ذلك. تم تسوية كل شيء تقريبًا بعد أسبوع من بدء تناول RHINO. والقدرة الجنسية أصبحت كما يجب بالطبع. لم أتعرض لأي أطباء. كنت أطلب شفاء من الموقع المذكور بسعر مخفض.
+    
+    
+    
+                                    </p>
+    <img src="img/rev1.jpg">
+                                </div>
+                            </div>
+                            <div class="comment mobile">
+                                <div class="ava"><img alt="" src="img/ava-2.jpg"></div>
+    
+                                    <div class="autor"> <span class="lt51">خالد</span> </div>
+    
+                                <div class="text">
+                                    <p class="lt52">تلك الوسيلة عجيبة حقًا!!! لم تعد تزعجني المشكلات التي عانيت منها لمدة تقرب من عامين! الآن أشعر بأنني في حالة جيدة، وأذهب إلى الحمام كما كنت عندما كنت شابًا. وكان سعرها جميلاً.
+    
+    
+                                    </p>
+    
+                                </div>
+                            </div>
+                            <div class="comment mobile">
+                                <div class="ava"><img alt="" src="img/ava-4.jpg"></div>
+    
+                                    <div class="autor"> <span class="lt54">محمد</span> </div>
+    
+                                <div class="text">
+                                    <p class="lt55">أؤكد ذلك! راينو رائع! اشتريته منذ عدة أشهر ومنذ ذلك الحين لم يحدث لي أي مشاكل. لا أذكر حتى كلمة التهاب البروستاتا. شكراً للمطورين على هذه الأقراص!
+    
+    
+                                    </p>
+    
+                                </div>
+                            </div>
+                            <div class="comment mobile">
+                                <div class="ava"><img alt="" src="img/ava-5.jpg"></div>
+    
+                                    <div class="autor"> <span class="lt57">رشيد</span> </div>
+    
+                                <div class="text">
+                                    <p class="lt58">تحققت منه على نفسي. في البداية، كنتُ أشرب الكثير من المضادات الحيوية وكنتُ أتلقى تدليكًا كثيرًا، وكانت معركة طويلة وشاقة لحل المشكلة. لكن بعد شهرين من زيارتي للمستشفى، بدأ كل شيء من جديد. ولكن بعد تناول RHINO الذي طلبتُه بخصم، أشعر بتحسن كبير في صحتي.
+    
+                                    </p>
+    <img src="img/rev2.jpg">
+                                </div>
+                            </div>
+                            <div class="comment mobile">
+                                <div class="ava"><img alt="" src="img/ava-6.jpg"></div>
+    
+                                    <div class="autor"> <span class="lt60">علي</span> </div>
+    
+                                <div class="text">
+                                    <p class="lt61">شكرًا جزيلاً على هذا المراجعة. كانت مثيرة للاهتمام حقًا. يثير هذا الطبيب الثقة في نفسي. لقد عانيت من التهاب البروستاتا لعدة سنوات وآمل أن يساعدني تركيبة RHINO الذي طلبته حديثًا. وعلى فكرة، يبدو أن سعر العبوة هو 5999 DA فقط.
+    
+    
+                                    </p>
+    
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <div class="ava"><img alt="" src="img/ava-7.jpg"></div>
+    
+                                    <div class="autor"> <span class="lt63">بلال</span> </div>
+    
+                                <div class="text">
+                                    <p class="lt64">بصعوبة أصدق ... ولكن العديد من الناس يقولون إنه يعمل.
+    
+    
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <div class="ava"><img alt="" src="img/ava-8.jpg"></div>
+    
+                                    <div class="autor"> <span class="lt66">عيسى مدني
+    </span> </div>
+    
+                                <div class="text">
+                                    <p class="lt67">شكراً، جعل RHINO أخي واثقًا!
+    
+    
+                                    </p>
+    
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <div class="ava"><img alt="" src="img/ava-9.jpg"></div>
+    
+                                    <div class="autor"> <span class="lt69">عبد</span> </div>
+    
+                                <div class="text">
+                                    <p class="lt70">كنتُ أعْتَقِدُ أنَّنِي سأخْضُعُ لعملية جراحيّة، ولكن الآن تم إلغاء كل شيء. أنا في الثامنة والأربعين، وأشعر بأنَّنِي في الثامنة والثلاثين، ولم أتوقع هذا النتيجة حتى الآن.
+    
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <div class="ava"><img alt="" src="img/ava-10.jpg"></div>
+    
+                                    <div class="autor"> <span class="lt72">فاروق</span> </div>
+    
+                                <div class="text">
+                                    <p class="lt73">أشكركم على المقالة! قمت بطلب هذا المنتج لزوجي ونستخدمه بالفعل.
+    
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <div class="ava"><img alt="" src="img/ava-11.jpg"></div>
+    
+                                    <div class="autor"> <span class="lt75">حياة</span> </div>
+    
+                                <div class="text">
+                                    <p class="lt76">أوصي بهذا المنتج. استخدمته لمدة شهر، وكان كل شيء على ما يرام جدًا. لم يتم اكتشاف أي آثار جانبية، على عكس معظم المضادات الحيوية. يخفف الآلام ويجعلني أذهب إلى الحمام أقل.
+    
+                                    </p>
+    
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <div class="ava"><img alt="" src="img/ava-12.jpg"></div>
+    
+                                    <div class="autor"> <span class="lt78">عمر</span> </div>
+    
+                                <div class="text">
+                                    <p class="lt79">أوصي بهذا المنتج. استخدمته لمدة شهر، وكان كل شيء على ما يرام جدًا. لم يتم اكتشاف أي آثار جانبية، على عكس معظم المضادات الحيوية. يخفف الآلام ويجعلني أذهب إلى الحمام أقل.
+    
+                                    </p>
+                                </div>
+                            </div>
+    
+    
+                        </div>
+                    </div><a href="#fform" class="button lt90">اطلب الآن </a>
+                </div>
+                <footer class="clearfix">
+                    <p class="lt91" id="footer-info">
+                    </p>
+                </footer>
+            </div>
+        </main>
+    <style>
+        .icon2 {
+            position: relative;
+            display: revert;
+            font-size: 28px;
+            line-height: 48px;
+            width: 153px;
+            margin: 10px 0 0 210px;
+            padding: 1px 21px 0 26px;
+            background-color: #d6ff6d;
+            border-radius: 35px;
+        }
+    
+        ul{
+           padding-right: 50px;
+        }
+        .comment .ava img {
+            float: right;
+            width: 60px;
+            margin: 0 15px 0 15px;
+            border-radius: 50%;
+        }
+        .flex{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .flex-item{
+            width: 49%;
+        }
+        .flex-item img{
+            width: 200px;
+            border-radius: 50%;
+            border: 1px solid silver;
+        }
+    
+            .order{
+                background-color: #e7e7e7;
+                max-width: 500px;
+                margin: 0 auto 20px;
+                padding-bottom: 20px;
+            }
+            form{
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            input{
+                background: #fcfcfc;
+                width: 100%;
+                height: 50px;
+                border: 1px solid #6c7177;
+                font-size: 16px;
+                font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+                color: #333;
+                border-radius: 6px;
+                margin-bottom: 10px;
+                text-indent: 20px;
+            }
+            .atuin-btn {
+    
+                margin: 10px;
+                text-decoration: none;
+                border: 2px solid #BFE2FF;
+                position: relative;
+                overflow: hidden;
+                font-size: 20px;
+                line-height: 20px;
+                padding: 12px 30px;
+                color: #FFF;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-family: 'Roboto Condensed', Тahoma, sans-serif;
+                background: #337AB7;
+                transition: box-shadow 0.3s, transform 0.3s;
+                cursor: pointer;
+            }
+            .atuin-btn:hover,
+            .atuin-btn:active,
+            .atuin-btn:focus {
+                transform: translateY(-4px);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+                color: #FFF;
+            }
+            .atuin-btn:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                /* left: -100%;
+                 width: 100%;*/
+                height: 100%;
+                background: linear-gradient(-45deg, transparent, rgba(191, 226, 255, 0.3), transparent);
+                transition: left 0.7s;
+            }
+            .atuin-btn:hover:before,
+            .atuin-btn:active:before,
+            .atuin-btn:focus:before {
+                left: 100%;
+            }
+    
+            .price_block {
+                margin: 19px auto 16px;
+                width: 280px;
+            }
+    
+            .price_block .price_item {
+                float: left;
+                width: 50%;
+                text-align: center;
+            }
+    
+            .price_block .text {
+                margin: 0 0 5px;
+                font-size: 12px;
+                line-height: 12px;
+                text-transform: uppercase;
+                /*text-shadow: 1px 1px 2px #c9aae2;*/
+                font-weight: 600;
+            }
+    
+            .price_block .value {
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 26px;
+            }
+    
+            .price_block .price_item.old .value {
+                text-decoration: line-through;
+            }
+    
+            .price_block .price_item.new .value {
+                color: #b60000;
+            }
+        @media screen and (max-width: 1199px) {
+            .icon2 {
+                position: absolute;
+                right: 77px;
+                top: 126px;
+                margin: 0px 0 0 250px;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            .flex-item{
+                width: 109%;
+            }
+            .icon2 {
+                margin: 0;
+                position: absolute;
+                top: 30%;
+                left: 50%;
+                margin-right: -50%;
+                transform: translate(-50%, -50%)
+            }
+            .men{
+                height: 108px!important;
+            }
+        }
+    
+        </style>
+      <script type="text/javascript">
+        $(document).ready(function(){
+            $('a[href^="#"]').on('click',function (e) {
+                e.preventDefault();
+    
+                var target = this.hash;
+                var $target = $(target);
+    
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top
+                }, 900, 'swing', function () {
+                    window.location.hash = target;
+                });
+            });
+        });
+    </script>
+    
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
